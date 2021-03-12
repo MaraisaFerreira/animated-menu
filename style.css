@@ -30,6 +30,7 @@ body {
 	height: 100vh;
 	z-index: 9;
 	background-color: #0007;
+	transform: translateX(-100vw);
 }
 
 /* --- Nav Menu Itens ------------------------------- */
