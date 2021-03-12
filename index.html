@@ -3,21 +3,25 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Animação do Menu</title>
+		<title>Menu - Animação</title>
 		<link rel="icon" type="image/png" href="favicon.png" />
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
 		<!-- Menu Overlay -->
-		<div class="overlay" id="overlay">
-			<!-- Menu Itens -->
+		<div class="overlay overlay-slide-left" id="overlay">
+			<!-- Menu Items -->
 			<nav>
 				<ul>
-					<li id="nav-1"><a href="#home">Home</a></li>
-					<li id="nav-2"><a href="#about">Sobre</a></li>
-					<li id="nav-3"><a href="#skills">Disponível</a></li>
-					<li id="nav-4"><a href="#projects">Projetos</a></li>
-					<li id="nav-5"><a href="#contact">Contato</a></li>
+					<li id="nav-1" class="slide-out-1"><a href="#">Home</a></li>
+					<li id="nav-2" class="slide-out-2"><a href="#about">Sobre</a></li>
+					<li id="nav-3" class="slide-out-3">
+						<a href="#skills">Descrição</a>
+					</li>
+					<li id="nav-4" class="slide-out-4">
+						<a href="#projects">Projetos</a>
+					</li>
+					<li id="nav-5" class="slide-out-5"><a href="#contact">Contato</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -29,7 +33,7 @@
 			<div class="bar3"></div>
 		</div>
 
-		<!-- Seções -->
+		<!-- Sections -->
 		<section id="home">
 			<a
 				href="https://github.com/MaraisaFerreira?tab=repositories"
@@ -37,9 +41,44 @@
 				>Portfólio</a
 			>
 		</section>
-		<section id="about"><h1>Sobre</h1></section>
-		<section id="skills"><h1>Material Disponível</h1></section>
-		<section id="projects"><h1>Projetos</h1></section>
+		<section id="about">
+			<h1>Sobre</h1>
+			<div class="description">
+				<p>
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum."
+				</p>
+			</div>
+		</section>
+		<section id="skills">
+			<h1>Descrição</h1>
+			<div class="description">
+				<p>
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum."
+				</p>
+			</div>
+		</section>
+		<section id="projects">
+			<h1>Projetos</h1>
+			<div class="description">
+				<a
+					href="https://github.com/MaraisaFerreira?tab=repositories"
+					target="_blank"
+					>Github Portfólio</a
+				>
+			</div>
+		</section>
 		<section id="contact"><h1>Contato</h1></section>
 
 		<!-- Script -->

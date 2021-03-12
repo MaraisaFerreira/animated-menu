@@ -2,11 +2,11 @@
 
 :root {
 	--primaryColor: #fff;
-	--navColor1: #e0bede;
-	--navColor2: #f6c8e2;
-	--navColor3: #f2afd4;
-	--navColor4: #72b1fe;
-	--navColor5: #8abeff;
+	--navColor1: #cdd0ea;
+	--navColor2: #e1a3ad;
+	--navColor3: #be6f97;
+	--navColor4: #7a4188;
+	--navColor5: #523672;
 }
 
 html {
@@ -19,21 +19,31 @@ body {
 	font-family: 'Poppins', sans-serif;
 }
 
-/* --- Menu Navegação ------------------------------ */
+/* --- Menu ------------------------------ */
 
-/* --- Overlay --------------------------------------- */
+/* Overlay */
 .overlay {
 	position: fixed;
+	z-index: 9;
 	top: 0;
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	z-index: 9;
-	background-color: #0007;
+	background-color: rgba(0, 0, 0, 0.7);
 	transform: translateX(-100vw);
 }
 
-/* --- Nav Menu Itens ------------------------------- */
+.overlay-slide-right {
+	transition: all 0.4s ease-in-out;
+	transform: translateX(0);
+}
+
+.overlay-slide-left {
+	transition: all 0.8s ease-in-out;
+	transform: translateX(-100vw);
+}
+
+/* Nav Menu Items */
 nav,
 nav ul {
 	height: 100vh;
@@ -56,8 +66,8 @@ nav ul li {
 nav li a {
 	position: relative;
 	top: 45%;
-	text-transform: uppercase;
 	color: #fff;
+	text-transform: uppercase;
 	letter-spacing: 4px;
 	text-decoration: none;
 	display: block;
@@ -73,12 +83,12 @@ nav li a::before {
 	content: '';
 	width: 25vw;
 	height: 3px;
+	background-color: #fff;
 	position: absolute;
 	top: 47.5%;
 	left: 0;
-	background-color: #fff;
-	box-shadow: 1px 1px 2px black;
 	opacity: 0;
+	box-shadow: 1px 1px 2px #0007;
 }
 
 nav li a:hover::before {
@@ -105,6 +115,68 @@ nav li:nth-of-type(5) {
 	background-color: var(--navColor5);
 }
 
+/* Slide in - animação com delays != */
+.slide-in-1 {
+	animation: slide-in 0.4s linear 0.2s both;
+}
+
+.slide-in-2 {
+	animation: slide-in 0.4s linear 0.4s both;
+}
+
+.slide-in-3 {
+	animation: slide-in 0.4s linear 0.6s both;
+}
+
+.slide-in-4 {
+	animation: slide-in 0.4s linear 0.8s both;
+}
+
+.slide-in-5 {
+	animation: slide-in 0.4s linear 1s both;
+}
+
+@keyframes slide-in {
+	from {
+		transform: translateX(-100%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+/* Slide out - animação com delays != */
+.slide-out-1 {
+	animation: slide-out 0.3s linear 0.5s both;
+}
+
+.slide-out-2 {
+	animation: slide-out 0.3s linear 0.4s both;
+}
+
+.slide-out-3 {
+	animation: slide-out 0.3s linear 0.3s both;
+}
+
+.slide-out-4 {
+	animation: slide-out 0.3s linear 0.2s both;
+}
+
+.slide-out-5 {
+	animation: slide-out 0.3s linear 0.1s both;
+}
+
+@keyframes slide-out {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-100%);
+	}
+}
+
 /* --- Menu Bars ------------------------------------ */
 
 .menu-bars {
@@ -124,39 +196,42 @@ nav li:nth-of-type(5) {
 	background-color: #fff;
 	margin: 8px 0;
 	transition: 0.4s;
+	box-shadow: 1px 1px 2px #0006;
 }
 
-/* Rotação 1ª barra */
+/* Rotação 1ª barra menu */
 .change .bar1 {
 	transform: rotate(-45deg) translate(-7px, 8px);
 }
 
-/* Fade out 2ª barra */
+/* Fade out 2ª barra menu */
 .change .bar2 {
 	opacity: 0;
 }
 
-/* Rotação ultima barra */
+/* Rotação última barra menu */
 .change .bar3 {
 	transform: rotate(45deg) translate(-6px, -8px);
 }
 
-/* --- Seções ------------------------------------ */
+/* --- Sections ------------------------------------ */
 
 section {
 	width: 100%;
 	height: 100vh;
 	position: relative;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	color: var(--primaryColor);
+	text-shadow: 2px 2px 3px black;
 }
 
 section#home {
-	background-image: url('https://images.unsplash.com/photo-1492666673288-3c4b4576ad9a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=889&q=80');
+	background-image: url('https://images.unsplash.com/photo-1583759311999-c8821f61e5b0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1430&q=80');
 	background-size: cover;
 	background-position: center center;
 }
@@ -181,6 +256,22 @@ section#skills {
 	background-color: var(--navColor3);
 }
 
+section .description {
+	background-color: #0005;
+	border-radius: 10px;
+	margin: 10px 40px;
+	padding: 20px;
+	box-shadow: 3px 3px 5px black;
+	letter-spacing: normal;
+}
+
+section#projects .description a {
+	text-decoration: none;
+	padding-bottom: 2px;
+	color: var(--primaryColor);
+	border-bottom: 1px solid var(--primaryColor);
+}
+
 section#projects {
 	background-color: var(--navColor4);
 }
@@ -189,7 +280,7 @@ section#contact {
 	background-color: var(--navColor5);
 }
 
-/* Media Query: Large Smartphone (Vertical) */
+/* Media Query: Grd Smartphone (Vertical) */
 @media (max-width: 600px) {
 	section#home a {
 		top: 1rem;
