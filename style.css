@@ -2,11 +2,11 @@
 
 :root {
 	--primaryColor: #fff;
-	--navColor1: #cdd0ea;
-	--navColor2: #e1a3ad;
-	--navColor3: #be6f97;
-	--navColor4: #7a4188;
-	--navColor5: #523672;
+	--navColor1: #ff4540;
+	--navColor2: #8754e8;
+	--navColor3: #52ebff;
+	--navColor4: #65e83f;
+	--navColor5: #ffcf3b;
 }
 
 html {
@@ -231,7 +231,7 @@ section {
 }
 
 section#home {
-	background-image: url('https://images.unsplash.com/photo-1583759311999-c8821f61e5b0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1430&q=80');
+	background-image: url('https://images.unsplash.com/photo-1500455497814-0b8db1d32380?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1484&q=80');
 	background-size: cover;
 	background-position: center center;
 }
