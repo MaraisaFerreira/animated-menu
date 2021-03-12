@@ -280,6 +280,11 @@ section#contact {
 	background-color: var(--navColor5);
 }
 
+section#contact i {
+	font-size: 3rem;
+	margin: 10px;
+}
+
 /* Media Query: Grd Smartphone (Vertical) */
 @media (max-width: 600px) {
 	section#home a {
