@@ -7,7 +7,6 @@ const nav4 = document.getElementById('nav-4');
 const nav5 = document.getElementById('nav-5');
 const navItems = [nav1, nav2, nav3, nav4, nav5];
 
-// Controle da animação
 function navAnimation(direction1, direction2) {
 	navItems.forEach((nav, i) => {
 		nav.classList.replace(
@@ -35,7 +34,6 @@ function toggleNav() {
 	}
 }
 
-// Event Listeners
 menuBars.addEventListener('click', toggleNav);
 navItems.forEach((nav) => {
 	nav.addEventListener('click', toggleNav);
